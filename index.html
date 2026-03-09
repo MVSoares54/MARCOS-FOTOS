@@ -20,7 +20,6 @@
   />
 
   <style>
-
     /* =========
        TÓPICO 2 – PALETA DE CORES
        ========= */
@@ -34,6 +33,7 @@
       --cor-sucesso:      #25d366;
       --cor-header:       rgba(5,5,5,0.95);
       --cor-footer:       #080808;
+
       --fonte-titulo:     'Oswald', sans-serif;
       --fonte-texto:      'Inter',  sans-serif;
     }
@@ -135,13 +135,22 @@
     }
 
     .hero-title { margin-bottom: 1rem; }
-    .hero-text  { margin-bottom: 1.8rem; }
+    .hero-text  { margin-bottom: 2rem; }
 
     .hero-highlight { color: var(--cor-destaque); }
 
     /* =========
-       TÓPICO 4 – BOTÃO COM ÍCONE VERDE WHATSAPP
+       TÓPICO 5 – BOTÕES ESTILIZADOS
        ========= */
+
+    .botoes-acao {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    /* Botão principal: WhatsApp (verde) */
     .btn-whatsapp {
       display: inline-flex;
       align-items: center;
@@ -149,8 +158,8 @@
       gap: 0.55rem;
       padding: 0.85rem 1.8rem;
       border-radius: 999px;
-      background: var(--cor-sucesso);   /* verde #25d366 */
-      color: #ffffff;                   /* texto e ícone brancos */
+      background: var(--cor-sucesso);
+      color: #ffffff;
       font-family: var(--fonte-texto);
       font-weight: 700;
       text-transform: uppercase;
@@ -161,17 +170,51 @@
       transition: all 0.25s ease;
       box-shadow: 0 8px 22px rgba(0,0,0,0.5);
       text-decoration: none;
+      white-space: nowrap;
     }
 
     .btn-whatsapp i {
       font-size: 1.1rem;
-      color: #ffffff;                   /* ícone branco */
+      color: #ffffff;
     }
 
     .btn-whatsapp:hover {
       background: #2fe077;
       transform: translateY(-2px);
       box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+    }
+
+    /* Botão secundário: contorno claro, sem preencher */
+    .btn-secundario {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--cor-texto);
+      font-family: var(--fonte-texto);
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      border: 1px solid var(--cor-borda);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-secundario i {
+      font-size: 1rem;
+    }
+
+    .btn-secundario:hover {
+      border-color: var(--cor-destaque);
+      color: var(--cor-destaque);
+      background: #ffffff05;
+      transform: translateY(-1px);
     }
 
     /* =========
@@ -184,7 +227,6 @@
       border-top: 1px solid var(--cor-borda);
       color: #888;
     }
-
   </style>
 </head>
 <body>
@@ -208,15 +250,27 @@
         galerias de jogos, explicação de como funciona e contato direto pelo WhatsApp.
       </p>
 
-      <!-- BOTÃO VERDE COM ÍCONE WHATSAPP -->
-      <a
-        class="btn-whatsapp"
-        href="https://wa.me/5591991075804"
-        target="_blank"
-      >
-        <i class="fab fa-whatsapp"></i>
-        Falar comigo no WhatsApp
-      </a>
+      <!-- TÓPICO 5 – GRUPO DE BOTÕES -->
+      <div class="botoes-acao">
+        <!-- Botão principal: WhatsApp -->
+        <a
+          class="btn-whatsapp"
+          href="https://wa.me/5591991075804"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i>
+          Falar no WhatsApp
+        </a>
+
+        <!-- Botão secundário: exemplo para futuro "Ver portfólio" -->
+        <a
+          class="btn-secundario"
+          href="#"
+        >
+          <i class="fas fa-image"></i>
+          Ver portfólio
+        </a>
+      </div>
 
     </div>
   </main>
