@@ -10,10 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- TÓPICO 4 – ÍCONES (Font Awesome) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
   <style>
     /* =========
        TÓPICO 2 – PALETA DE CORES
-       (você pode alterar as cores aqui quando quiser)
        ========= */
     :root {
       /* Fundo geral do site (body) */
@@ -139,7 +147,7 @@
       h3 { font-size: 1.3rem; }
       p  { font-size: 0.95rem; }
 
-      .section-titulo   { font-size: 1.7rem; }
+      .section-titulo    { font-size: 1.7rem; }
       .section-subtitulo { font-size: 0.9rem; }
     }
 
@@ -202,7 +210,7 @@
     }
 
     /* =========
-       BOTÃO
+       BOTÃO COM ÍCONE
        ========= */
     .btn-primario {
       display: inline-flex;
@@ -221,6 +229,10 @@
       cursor: pointer;
       transition: all 0.25s ease;
       box-shadow: 0 8px 22px rgba(0,0,0,0.6);
+    }
+
+    .btn-primario i {
+      font-size: 1rem;
     }
 
     .btn-primario:hover {
@@ -257,7 +269,10 @@
         Em breve aqui será a home completa de fotografia de futebol:
         galerias de jogos, explicação de como funciona e contato direto pelo WhatsApp.
       </p>
+
+      <!-- Botão com ícone de WhatsApp (Font Awesome) -->
       <button class="btn-primario" onclick="window.open('https://wa.me/5591991075804', '_blank')">
+        <i class="fab fa-whatsapp"></i>
         Falar comigo no WhatsApp
       </button>
     </div>
