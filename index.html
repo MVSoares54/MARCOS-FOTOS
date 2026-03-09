@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marcos – Fotografia de Futebol</title>
 
-  <!-- TÓPICO 1 – Fontes Google -->
+  <!-- Fontes Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- TÓPICO 4 – Ícones Font Awesome -->
+  <!-- Ícones Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -21,7 +21,7 @@
 
   <style>
     /* =========
-       TÓPICO 2 – PALETA DE CORES
+       PALETA DE CORES
        ========= */
     :root {
       --cor-fundo:        #050505;
@@ -56,10 +56,13 @@
       min-height: 100vh;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     /* =========
-       TÓPICO 3 – TIPOGRAFIA
+       TIPOGRAFIA
        ========= */
     h1, h2, h3 {
       font-family: var(--fonte-titulo);
@@ -67,8 +70,8 @@
       text-transform: uppercase;
     }
 
-    h1 { font-size: 2.8rem; font-weight: 700; line-height: 1.1; }
-    h2 { font-size: 2.1rem; font-weight: 600; line-height: 1.2; }
+    h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.1; }
+    h2 { font-size: 2rem;  font-weight: 600; line-height: 1.2; }
     h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.3; }
 
     p {
@@ -77,30 +80,148 @@
       color: var(--cor-texto-sec);
     }
 
-    .texto-pequeno { font-size: 0.85rem; line-height: 1.5; }
+    .texto-pequeno {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
 
     @media (max-width: 768px) {
-      h1 { font-size: 2.2rem; }
-      h2 { font-size: 1.8rem; }
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.7rem; }
       h3 { font-size: 1.3rem; }
       p  { font-size: 0.95rem; }
     }
 
     /* =========
-       HEADER
+       HEADER + MENU
        ========= */
     header {
-      padding: 1rem 1.5rem;
       background: var(--cor-header);
       border-bottom: 1px solid var(--cor-borda);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
     }
 
-    header h1 {
-      font-size: 1.2rem;
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      white-space: nowrap;
+    }
+
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 2px solid var(--cor-destaque);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
       color: var(--cor-destaque);
+    }
+
+    .logo-text {
+      font-family: var(--fonte-titulo);
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: var(--cor-texto-sec);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      position: relative;
+      padding-bottom: 0.2rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--cor-destaque);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a.ativo {
+      color: var(--cor-texto);
+    }
+
+    .nav-links a.ativo::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--cor-sucesso);
+      color: var(--cor-sucesso);
+    }
+
+    .nav-cta i {
+      font-size: 0.9rem;
+    }
+
+    /* Menu compacto no mobile */
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .nav-links {
+        gap: 0.9rem;
+      }
+
+      .nav-cta {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.75rem;
+      }
     }
 
     /* =========
@@ -111,7 +232,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 1.5rem;
     }
 
     .container {
@@ -140,9 +261,8 @@
     .hero-highlight { color: var(--cor-destaque); }
 
     /* =========
-       TÓPICO 5 – BOTÕES ESTILIZADOS
+       BOTÕES
        ========= */
-
     .botoes-acao {
       display: flex;
       flex-wrap: wrap;
@@ -150,7 +270,6 @@
       justify-content: center;
     }
 
-    /* Botão principal: WhatsApp (verde) */
     .btn-whatsapp {
       display: inline-flex;
       align-items: center;
@@ -184,7 +303,6 @@
       box-shadow: 0 12px 28px rgba(0,0,0,0.6);
     }
 
-    /* Botão secundário: contorno claro, sem preencher */
     .btn-secundario {
       display: inline-flex;
       align-items: center;
@@ -231,13 +349,37 @@
 </head>
 <body>
 
+  <!-- HEADER COM MENU -->
   <header>
-    <h1>Marcos – Fotografia de Futebol</h1>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-futbol"></i>
+        </div>
+        <div class="logo-text">Marcos · Foto Futebol</div>
+      </a>
+
+      <nav>
+        <div class="nav-links">
+          <a href="#" class="ativo">Home</a>
+          <a href="#galerias">Galerias</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <a
+          class="nav-cta"
+          href="https://wa.me/5591991075804"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp
+        </a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <div class="container">
-
       <div class="hero-kicker">Fotografia esportiva</div>
 
       <h2 class="hero-title">
@@ -250,9 +392,7 @@
         galerias de jogos, explicação de como funciona e contato direto pelo WhatsApp.
       </p>
 
-      <!-- TÓPICO 5 – GRUPO DE BOTÕES -->
       <div class="botoes-acao">
-        <!-- Botão principal: WhatsApp -->
         <a
           class="btn-whatsapp"
           href="https://wa.me/5591991075804"
@@ -262,16 +402,14 @@
           Falar no WhatsApp
         </a>
 
-        <!-- Botão secundário: exemplo para futuro "Ver portfólio" -->
         <a
           class="btn-secundario"
-          href="#"
+          href="#galerias"
         >
           <i class="fas fa-image"></i>
           Ver portfólio
         </a>
       </div>
-
     </div>
   </main>
 
