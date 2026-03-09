@@ -32,7 +32,7 @@
       --cor-destaque:     #e8b400;
       --cor-sucesso:      #25d366;
       --cor-header:       rgba(5,5,5,0.95);
-      --cor-footer:       #080808;
+      --cor-footer:       #050505;
 
       --fonte-titulo:     'Oswald', sans-serif;
       --fonte-texto:      'Inter',  sans-serif;
@@ -638,14 +638,103 @@
       font-size: 0.85rem;
     }
 
-    /* FOOTER */
-    footer {
-      padding: 1rem;
-      text-align: center;
-      background: var(--cor-footer);
+    /* =========
+       RODAPÉ COMPLETO
+       ========= */
+    .footer-main {
       border-top: 1px solid var(--cor-borda);
-      color: #888;
+      background: var(--cor-footer);
     }
+
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 1.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr) minmax(0, 1.3fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-col-titulo {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.6rem;
+      color: var(--cor-texto);
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+    }
+
+    .footer-nav,
+    .footer-contato-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-nav a {
+      color: var(--cor-texto-sec);
+    }
+
+    .footer-nav a:hover {
+      color: var(--cor-destaque);
+    }
+
+    .footer-contato-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--cor-texto-sec);
+    }
+
+    .footer-contato-item i {
+      color: var(--cor-destaque);
+      font-size: 0.95rem;
+    }
+
+    .footer-bottom {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: #777;
+      border-top: 1px solid var(--cor-borda);
+    }
+
+    .footer-bottom a {
+      color: var(--cor-texto-sec);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--cor-destaque);
+    }
+
   </style>
 </head>
 <body>
@@ -741,7 +830,7 @@
           </p>
           <p class="hero-lateral-destaque">
             <i class="fas fa-circle-play"></i>
-            Próximo passo: <strong>“Como funciona” e “Galerias recentes”</strong> logo abaixo.
+            Role a página para ver <strong>“Como funciona”</strong> e as <strong>galerias de teste</strong>.
           </p>
         </aside>
       </section>
@@ -925,10 +1014,57 @@
     </div>
   </main>
 
-  <footer id="contato">
-    <p class="texto-pequeno">
-      © 2026 Marcos – Fotografia de Futebol · Site em desenvolvimento
-    </p>
+  <!-- RODAPÉ COMPLETO -->
+  <footer class="footer-main" id="contato">
+    <div class="footer-inner">
+      <!-- Coluna 1: Marca -->
+      <div class="footer-brand">
+        <div class="footer-col-titulo">Marcos · Fotografia de Futebol</div>
+        <p>
+          Registro os momentos dos seus jogos e organizo tudo em galerias simples de navegar.
+          Este site ainda está em construção, mas já mostra como será o fluxo completo.
+        </p>
+      </div>
+
+      <!-- Coluna 2: Navegação -->
+      <div>
+        <div class="footer-col-titulo">Navegação</div>
+        <ul class="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#galerias">Galerias</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Contato -->
+      <div>
+        <div class="footer-col-titulo">Contato</div>
+        <ul class="footer-contato-list">
+          <li class="footer-contato-item">
+            <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/5591991075804" target="_blank">
+              WhatsApp: (91) 99107-5804
+            </a>
+          </li>
+          <li class="footer-contato-item">
+            <i class="fas fa-envelope"></i>
+            <span>E-mail: seuemail@exemplo.com</span>
+          </li>
+          <li class="footer-contato-item">
+            <i class="fab fa-instagram"></i>
+            <a href="#" target="_blank">
+              Instagram: @seuuser
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Marcos – Fotografia de Futebol. Todos os direitos reservados.</span>
+      <span>Site em desenvolvimento no GitHub Pages.</span>
+    </div>
   </footer>
 
 </body>
