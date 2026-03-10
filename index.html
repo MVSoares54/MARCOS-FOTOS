@@ -10,14 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Ícones Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <!-- Ícones Font Awesome (integrity removido para evitar bloqueio do navegador) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     /* =========
@@ -30,9 +24,9 @@
       --cor-texto:        #f5f5f5;
       --cor-texto-sec:    #aaaaaa;
       --cor-borda:        #ffffff18;
-      --cor-destaque:     #e02020;   /* vermelho principal */
-      --cor-destaque-2:   #ff4444;   /* vermelho mais claro (hover) */
-      --cor-sucesso:      #25d366;   /* verde WhatsApp */
+      --cor-destaque:     #e02020;
+      --cor-destaque-2:   #ff4444;
+      --cor-sucesso:      #25d366;
       --cor-header:       rgba(8,8,8,0.97);
       --cor-footer:       #060606;
 
@@ -44,7 +38,6 @@
       scroll-behavior: smooth;
     }
 
-    /* RESET */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -65,7 +58,6 @@
       text-decoration: none;
     }
 
-    /* TIPOGRAFIA */
     h1, h2, h3 {
       font-family: var(--fonte-titulo);
       letter-spacing: 0.04em;
@@ -115,7 +107,6 @@
       gap: 1.5rem;
     }
 
-    /* LOGO COM FOTO DE PERFIL */
     .logo {
       display: flex;
       align-items: center;
@@ -130,11 +121,9 @@
       border: 2px solid var(--cor-destaque);
       object-fit: cover;
       display: block;
-      /* fallback se a foto ainda não estiver no repositório */
       background: #222;
     }
 
-    /* Ícone de fallback (aparece se não tiver a foto) */
     .logo-foto-fallback {
       width: 34px;
       height: 34px;
@@ -188,18 +177,14 @@
       transition: width 0.25s ease;
     }
 
-    .nav-links a:hover {
-      color: #fff;
-    }
+    .nav-links a:hover { color: #fff; }
 
     .nav-links a:hover::after,
     .nav-links a.ativo::after {
       width: 100%;
     }
 
-    .nav-links a.ativo {
-      color: var(--cor-texto);
-    }
+    .nav-links a.ativo { color: var(--cor-texto); }
 
     .nav-cta {
       display: flex;
@@ -215,13 +200,8 @@
       transition: background 0.2s;
     }
 
-    .nav-cta:hover {
-      background: #25d36618;
-    }
-
-    .nav-cta i {
-      font-size: 0.9rem;
-    }
+    .nav-cta:hover { background: #25d36618; }
+    .nav-cta i { font-size: 0.9rem; }
 
     @media (max-width: 768px) {
       .header-inner {
@@ -235,13 +215,8 @@
         justify-content: space-between;
       }
 
-      .nav-links {
-        gap: 0.75rem;
-      }
-
-      .nav-links a {
-        font-size: 0.75rem;
-      }
+      .nav-links { gap: 0.75rem; }
+      .nav-links a { font-size: 0.75rem; }
 
       .nav-cta {
         padding: 0.35rem 0.75rem;
@@ -252,9 +227,7 @@
     /* =========
        MAIN
        ========= */
-    main {
-      flex: 1;
-    }
+    main { flex: 1; }
 
     /* =========
        HERO
@@ -300,17 +273,9 @@
       margin-bottom: 0.75rem;
     }
 
-    .hero-kicker i {
-      font-size: 0.85rem;
-    }
-
-    .hero-title {
-      margin-bottom: 0.8rem;
-    }
-
-    .hero-highlight {
-      color: var(--cor-destaque);
-    }
+    .hero-kicker i { font-size: 0.85rem; }
+    .hero-title { margin-bottom: 0.8rem; }
+    .hero-highlight { color: var(--cor-destaque); }
 
     .hero-subtitle {
       font-size: 0.95rem;
@@ -359,10 +324,9 @@
       }
     }
 
-    /* Painel lateral do hero */
     .hero-lateral {
       border-radius: 12px;
-      border: 1px solid var(--cor-destaque)44;
+      border: 1px solid #e0202044;
       padding: 1.6rem 1.3rem;
       background: linear-gradient(135deg, #1a0808 0%, #110000 100%);
       display: flex;
@@ -416,9 +380,7 @@
     }
 
     @media (max-width: 800px) {
-      .botoes-acao {
-        justify-content: center;
-      }
+      .botoes-acao { justify-content: center; }
     }
 
     .btn-whatsapp {
@@ -443,9 +405,7 @@
       white-space: nowrap;
     }
 
-    .btn-whatsapp i {
-      font-size: 1.05rem;
-    }
+    .btn-whatsapp i { font-size: 1.05rem; }
 
     .btn-whatsapp:hover {
       background: #2fe077;
@@ -502,9 +462,7 @@
       white-space: nowrap;
     }
 
-    .btn-secundario i {
-      font-size: 1rem;
-    }
+    .btn-secundario i { font-size: 1rem; }
 
     .btn-secundario:hover {
       border-color: var(--cor-destaque);
@@ -619,10 +577,7 @@
       font-weight: 700;
     }
 
-    .como-titulo {
-      font-size: 1rem;
-      color: #fff;
-    }
+    .como-titulo { font-size: 1rem; color: #fff; }
 
     .como-texto {
       font-size: 0.88rem;
@@ -689,15 +644,11 @@
     }
 
     @media (max-width: 1000px) {
-      .galerias-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      .galerias-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 600px) {
-      .galerias-grid {
-        grid-template-columns: 1fr;
-      }
+      .galerias-grid { grid-template-columns: 1fr; }
     }
 
     .card-galeria {
@@ -812,15 +763,9 @@
       transition: gap 0.2s;
     }
 
-    .card-galeria-link:hover {
-      gap: 0.5rem;
-    }
+    .card-galeria-link:hover { gap: 0.5rem; }
+    .card-galeria-link i { font-size: 0.8rem; }
 
-    .card-galeria-link i {
-      font-size: 0.8rem;
-    }
-
-    /* CTA EMBAIXO DAS GALERIAS */
     .galerias-cta {
       text-align: center;
       margin-top: 2.5rem;
@@ -830,10 +775,7 @@
       background: #0f0000;
     }
 
-    .galerias-cta p {
-      margin-bottom: 1rem;
-      font-size: 0.93rem;
-    }
+    .galerias-cta p { margin-bottom: 1rem; font-size: 0.93rem; }
 
     /* =========
        RODAPÉ
@@ -853,5 +795,412 @@
     }
 
     @media (max-width: 900px) {
-      .footer
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
 
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-logo-text {
+      font-family: var(--fonte-titulo);
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .footer-desc {
+      font-size: 0.85rem;
+      color: var(--cor-texto-sec);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .footer-social a {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--cor-borda);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: var(--cor-texto-sec);
+      transition: all 0.2s;
+    }
+
+    .footer-social a:hover {
+      border-color: var(--cor-destaque);
+      color: var(--cor-destaque);
+      background: #e0202010;
+    }
+
+    .footer-col-titulo {
+      font-family: var(--fonte-titulo);
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--cor-texto-sec);
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--cor-destaque); }
+
+    .footer-contato {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-contato-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--cor-texto-sec);
+    }
+
+    .footer-contato-item i {
+      color: var(--cor-destaque);
+      font-size: 0.9rem;
+      width: 16px;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--cor-borda);
+      padding: 1rem 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: var(--cor-texto-sec);
+    }
+
+    .footer-bottom a {
+      color: var(--cor-destaque);
+      transition: opacity 0.2s;
+    }
+
+    .footer-bottom a:hover { opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+  <!-- =========
+       HEADER
+       ========= -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <div class="logo-foto-fallback">
+          <i class="fa-solid fa-camera"></i>
+        </div>
+        <span class="logo-text">Marcos · Foto</span>
+      </a>
+      <nav>
+        <div class="nav-links">
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#galerias" class="ativo">Galerias</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="nav-cta">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =========
+         HERO
+         ========= -->
+    <section class="hero-wrapper">
+      <div class="hero-container">
+        <div class="hero-conteudo">
+          <div class="hero-kicker">
+            <i class="fa-solid fa-camera-retro"></i> Fotografia profissional
+          </div>
+          <h1 class="hero-title">
+            Momentos do futebol<br>
+            <span class="hero-highlight">eternizados</span>
+          </h1>
+          <p class="hero-subtitle">
+            Capturo a emoção, a velocidade e a intensidade do futebol em imagens que ficam para sempre.
+          </p>
+          <ul class="hero-beneficios">
+            <li><i class="fa-solid fa-circle-check"></i> Cobertura completa de jogos e treinos</li>
+            <li><i class="fa-solid fa-circle-check"></i> Entrega rápida com alta resolução</li>
+            <li><i class="fa-solid fa-circle-check"></i> Edição profissional inclusa</li>
+            <li><i class="fa-solid fa-circle-check"></i> Licença de uso para atletas e clubes</li>
+          </ul>
+          <div class="botoes-acao">
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Solicitar orçamento
+            </a>
+            <a href="#galerias" class="btn-secundario">
+              <i class="fa-solid fa-images"></i> Ver galerias
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-lateral">
+          <div class="hero-lateral-titulo">Por que me contratar?</div>
+          <p>Anos de experiência fotografando futebol de várzea até campeonatos estaduais.</p>
+          <div class="hero-lateral-stat">
+            <div class="hero-lateral-stat-item">
+              <i class="fa-solid fa-trophy"></i> +200 jogos fotografados
+            </div>
+            <div class="hero-lateral-stat-item">
+              <i class="fa-solid fa-star"></i> Avaliação 5 estrelas
+            </div>
+            <div class="hero-lateral-stat-item">
+              <i class="fa-solid fa-bolt"></i> Entrega em até 48h
+            </div>
+            <div class="hero-lateral-stat-item">
+              <i class="fa-solid fa-shield-halved"></i> Equipamento profissional
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========
+         COMO FUNCIONA
+         ========= -->
+    <section id="como-funciona" class="secao">
+      <div class="secao-cabecalho">
+        <div class="secao-divider"></div>
+        <div class="secao-kicker"><i class="fa-solid fa-list-check"></i> Processo</div>
+        <h2 class="secao-titulo">Como funciona</h2>
+        <p class="secao-subtitulo">Do contato até a entrega das fotos, tudo simples e rápido.</p>
+      </div>
+      <div class="como-funciona-grid">
+        <div class="como-card">
+          <div class="como-etapa">
+            <span class="como-etapa-numero">1</span> Contato
+          </div>
+          <h3 class="como-titulo">Você entra em contato</h3>
+          <p class="como-texto">Mande mensagem pelo WhatsApp com data, local e tipo de evento que você quer fotografar.</p>
+          <div class="como-icons">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </div>
+        <div class="como-card">
+          <div class="como-etapa">
+            <span class="como-etapa-numero">2</span> Cobertura
+          </div>
+          <h3 class="como-titulo">Eu fotografo o evento</h3>
+          <p class="como-texto">Apareço no local com equipamento profissional e capturo tudo com qualidade.</p>
+          <div class="como-icons">
+            <i class="fa-solid fa-camera"></i>
+            <i class="fa-solid fa-futbol"></i>
+          </div>
+        </div>
+        <div class="como-card">
+          <div class="como-etapa">
+            <span class="como-etapa-numero">3</span> Entrega
+          </div>
+          <h3 class="como-titulo">Receba suas fotos</h3>
+          <p class="como-texto">Edito e entrego em alta resolução em até 48h, prontas para usar onde quiser.</p>
+          <div class="como-icons">
+            <i class="fa-solid fa-cloud-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========
+         GALERIAS
+         ========= -->
+    <div class="galerias-wrapper">
+      <section id="galerias" class="galerias">
+        <div class="secao-cabecalho">
+          <div class="secao-divider"></div>
+          <div class="secao-kicker"><i class="fa-solid fa-images"></i> Portfólio</div>
+          <h2 class="secao-titulo">Galerias</h2>
+          <p class="secao-subtitulo">Alguns dos trabalhos que já realizei. Clique em qualquer galeria para ver mais.</p>
+        </div>
+
+        <div class="galerias-filtro">
+          <button class="filtro-btn ativo">Todos</button>
+          <button class="filtro-btn">Campeonatos</button>
+          <button class="filtro-btn">Treinos</button>
+          <button class="filtro-btn">Retratos</button>
+        </div>
+
+        <div class="galerias-grid">
+
+          <div class="card-galeria">
+            <div class="card-galeria-thumb">
+              <i class="fa-solid fa-futbol"></i>
+              <span class="card-galeria-badge">Novo</span>
+              <span class="card-galeria-tipo">Campeonato</span>
+            </div>
+            <div class="card-galeria-body">
+              <h3 class="card-galeria-titulo">Copa Regional Sub-20 2025</h3>
+              <div class="card-galeria-info">
+                <span class="card-galeria-info-item">
+                  <i class="fa-solid fa-image"></i> 84 fotos
+                </span>
+                <span class="card-galeria-info-item">
+                  <i class="fa-solid fa-calendar"></i> Mar 2025
+                </span>
+              </div>
+              <div class="card-galeria-rodape">
+                <span>Estádio Municipal</span>
+                <a href="#" class="card-galeria-link">
+                  Ver galeria <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-galeria">
+            <div class="card-galeria-thumb">
+              <i class="fa-solid fa-futbol"></i>
+              <span class="card-galeria-tipo">Treino</span>
+            </div>
+            <div class="card-galeria-body">
+              <h3 class="card-galeria-titulo">Treino Atlético Cidade FC</h3>
+              <div class="card-galeria-info">
+                <span class="card-galeria-info-item">
+                  <i class="fa-solid fa-image"></i> 47 fotos
+                </span>
+                <span class="card-galeria-info-item">
+                  <i class="fa-solid fa-calendar"></i> Fev 2025
+                </span>
+              </div>
+              <div class="card-galeria-rodape">
+                <span>CT do clube</span>
+                <a href="#" class="card-galeria-link">
+                  Ver galeria <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-galeria">
+            <div class="card-galeria-thumb">
+              <i class="fa-solid fa-futbol"></i>
+              <span class="card-galeria-tipo">Retrato</span>
+            </div>
+            <div class="card-galeria-body">
+              <h3 class="card-galeria-titulo">Retratos de Atletas 2025</h3>
+              <div class="card-galeria-info">
+                <span class="card-galeria-info-item">
+                  <i class="fa-solid fa-image"></i> 32 fotos
+                </span>
+                <span class="card-galeria-info-item">
+                  <i class="fa-solid fa-calendar"></i> Jan 2025
+                </span>
+              </div>
+              <div class="card-galeria-rodape">
+                <span>Estúdio externo</span>
+                <a href="#" class="card-galeria-link">
+                  Ver galeria <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="galerias-cta">
+          <p>Quer ver mais trabalhos ou solicitar um evento personalizado?</p>
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="btn-primario">
+            <i class="fa-brands fa-whatsapp"></i> Falar pelo WhatsApp
+          </a>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- =========
+       RODAPÉ
+       ========= -->
+  <footer class="footer-main" id="contato">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <div class="logo-foto-fallback" style="width:28px;height:28px;font-size:0.8rem;">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <span class="footer-logo-text">Marcos · Foto</span>
+        </div>
+        <p class="footer-desc">
+          Fotografia de futebol profissional. Capturo emoção, velocidade e intensidade em cada clique.
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-titulo">Links</div>
+        <ul class="footer-links">
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#galerias">Galerias</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-titulo">Contato</div>
+        <div class="footer-contato">
+          <div class="footer-contato-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>(11) 99999-9999</span>
+          </div>
+          <div class="footer-contato-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>marcos@email.com</span>
+          </div>
+          <div class="footer-contato-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>São Paulo – SP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Marcos Fotografia. Todos os direitos reservados.</span>
+      <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">Solicitar orçamento</a>
+    </div>
+  </footer>
+
+</body>
+</html>
