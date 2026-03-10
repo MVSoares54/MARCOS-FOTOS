@@ -45,14 +45,20 @@
     }
 
     body {
-      font-family: var(--fonte-texto);
-      background: var(--cor-fundo);
-      color: var(--cor-texto);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+  font-family: var(--fonte-texto);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
+  /* ADICIONE ESTAS LINHAS: */
+  background-image: url('img/foto-fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
     a {
       color: inherit;
       text-decoration: none;
