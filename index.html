@@ -501,7 +501,15 @@
       text-align: center;
       margin-bottom: 2rem;
     }
-
+/* Fundo escuro para melhorar legibilidade sobre o background */
+.secao-overlay {
+  background: rgba(0, 0, 0, 0.7);   /* preto com transparência */
+  border-radius: 12px;
+  padding-top: 2rem;                /* adiciona respiro acima */
+  padding-bottom: 2.5rem;           /* respiro abaixo */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
     .secao-kicker {
       display: inline-flex;
       align-items: center;
@@ -1005,7 +1013,7 @@
     <!-- =========
          COMO FUNCIONA
          ========= -->
-    <section id="como-funciona" class="secao">
+    <section id="como-funciona" class="secao secao-overlay">
       <div class="secao-cabecalho">
         <div class="secao-divider"></div>
         <div class="secao-kicker"><i class="fa-solid fa-list-check"></i> Processo</div>
